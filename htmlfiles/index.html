@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Booking App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #008080;
+      color: #fff;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 36px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+    .form-section, .car-list {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #555;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #006666;
+    }
+    .car-card {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .car-card:last-child {
+      border-bottom: none;
+    }
+    .car-card img {
+      width: 100px;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    .car-info h3 {
+      margin-bottom: 5px;
+      color: #222;
+    }
+    .car-info p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚘 Easy Car Booking</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Booking Form -->
+    <div class="form-section">
+      <h2>Book Your Ride</h2>
+      <form>
+        <label>Pickup Location:</label>
+        <input type="text" placeholder="Enter your pickup location" required>
+
+        <label>Drop-off Location:</label>
+        <input type="text" placeholder="Enter your drop-off location" required>
+
+        <label>Pickup Date & Time:</label>
+        <input type="datetime-local" required>
+
+        <label>Select Car Type:</label>
+        <select required>
+          <option value="">Choose car type</option>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Van</option>
+          <option>Luxury</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+
+    <!-- Car List -->
+    <div class="car-list">
+      <h2>Available Cars</h2>
+
+      <div class="car-card">
+        <img src="https://via.placeholder.com/100x60" alt="Sedan">
+        <div class="car-info">
+          <h3>Sedan</h3>
+          <p>Comfortable for up to 4 people. Air-conditioned.</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://via.placeholder.com/100x60" alt="SUV">
+        <div class="car-info">
+          <h3>SUV</h3>
+          <p>Spacious ride for family trips. Seats 6-7 people.</p>
+        </div>
+      </div>
+
+      <div class="car-card">
+        <img src="https://via.placeholder.com/100x60" alt="Luxury">
+        <div class="car-info">
+          <h3>Luxury</h3>
+          <p>High-end vehicles for a premium experience.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
